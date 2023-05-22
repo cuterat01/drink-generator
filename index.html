@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="height=device-height, width=device-width">
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Drink Carousel</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="public/css/normalize.css">
+		<link rel="stylesheet" href="public/css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="bg"></div>
+
+		<header>
+			<h1>Enter a Liquor</h1>
+			<input type="text" name="" value="">
+			<button type="button" name="button">Get Cocktail</button>
+		</header>
+
+		<main>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="drinkCard">
+							<h2>Bartender</h2>
+							<img src="public\css\img\cocktails.jpg" alt="drink shaker">
+							<h3>Instructions</h3>
+							<p>Preparing your drink...</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination">
+				</div>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="public/js/main.js"></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script>
+			let swiper = new Swiper(".swiper-container", {
+				effect: "coverflow",
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: "auto",
+				coverflowEffect: {
+					rotate: 0,
+					stretch: 0,
+					depth: 100,
+					modifier: 2,
+					slideShadows: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+				},
+			});
+		</script>
+	</body>
+</html>
